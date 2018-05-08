@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- html -->
+<html>
+<!-- header -->
+<head>
+	<title>Payment | Boosted Board</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Boosted Board Payments">
+  	<meta name="keywords" content="boosted, board, electric">
+  	<meta name="author" content="Indunil Seneviratne">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="style/css/main.css">
+	<link rel="stylesheet" type="text/css" href="style/css/bootstrap.min.css">
+  	
+	<script	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+
+  	<script src="js/bootstrap.min.js"></script>
+  	<script> 
+  		// partial view load to mobile payment sidebar
+	    $(function(){
+	      $("#paymentSidebarMobile").load("paymentSidebar.html"); 
+	    });
+	    // / partial view load to mobile payment sidebar
+
+	    // partial view load to desktop payment sidebar
+	    $(function(){
+	      $("#paymentSidebarDesktop").load("paymentSidebar.html"); 
+	    });
+	    // / partial view load to desktop payment sidebar
+
+	    // partial view load to shipping details
+	    $(function(){
+	      $("#shippingDetails").load("shippingDetails.html"); 
+	    });
+	    // / partial view load to shipping details
+
+	   	// partial view load to shipping details
+	    $(function(){
+	      $("#shippingMethod").load("shippingMethod.html"); 
+	    });
+	    // / partial view load to shipping details
+
+	   	// partial view load to shipping details
+	    $(function(){
+	      $("#paymentMethod").load("paymentMethod.html"); 
+	    });
+	    // / partial view load to shipping details
+
+	    // mobile sidebar show hide text
+		function myFunction() {
+		    var x = document.getElementById("showHide");
+		    if (x.innerHTML === "Show Order Summary") {
+		        x.innerHTML = "Hide Order Summary";
+		        $("#btn3").toggleClass('flip'); 
+		    } else {
+		        x.innerHTML = "Show Order Summary";
+		    }
+		}
+		// / mobile sidebar show hide text
+
+		// desktop sidebar height calculation
+		$(document).ready(function() {
+			function heightGenerator(){
+  				var docHeight = $(document).height();
+	    		$(".SidebarDesktop").height(docHeight)
+			}
+			setTimeout(heightGenerator, 200);
+		});
+		// / desktop sidebar height calculation
+    </script> 
+</head>
+<!-- header -->
+
+<!-- body -->
+<body>
+	<!-- content wrapper -->
+	<div class="container-fluid wrapper">
+
+		<!-- mobile content -->
+		<div class="mobile-content">
+			<!-- site logo -->
+			<div class="logo-wrapper">
+				<img class="logo" src="assets/images/logo.png" alt="bootsted board logo">
+			</div>
+			<!-- / site logo -->
+			<!-- sidebar all details in here when mobile -->
+			<div id="accordion" class="sidebar-mobile">
+				  	<div class="card">
+				  		<div class="wrap">
+					  		<!-- accordion header -->
+						    <div class="card-header">
+						    	<!-- title -->
+							    <a class="card-link" data-toggle="collapse" href="#collapseOne">
+							        <div class="row">
+							        	<div class="col-9"> 
+							        		<div>
+							        			<img class="cart" src="assets/images/cart.png" alt="cart icon">
+								        		<span  onclick="myFunction()" id="showHide">Show Order Summary</span>
+								        		<img class="cart" src="assets/images/down-angle.png" alt="cart icon" id="btn3">
+							        		</div>
+							        	</div>
+							        	<div class="col-3">
+							        		<div class="float-right">
+							        			<p class="price">$749.00</p>
+							        		</div>
+							        	</div>
+							        </div>
+							    </a>
+							    <!-- / title -->
+						  	</div>
+						  	<!-- / accordion header -->
+						</div>
+					  	<!-- accodion body -->
+						<div id="collapseOne" class="collapse" data-parent="#accordion">
+						    <div class="card-body">
+						    	<div class="wrap">
+						      		<div id="paymentSidebarMobile">
+						      		</div>
+						      	</div>
+						    </div>
+						</div>
+						<!-- / accodion body -->
+				</div>
+			</div>
+			<!-- sidebar all details in here when mobile -->
+		</div>
+		<!-- / mobile content -->
+
+		<!-- main common contaier -->
+		<div class="main-common">
+			<!-- site logo -->
+			<img class="logo" src="assets/images/logo.png" alt="bootsted board logo">
+			<!-- / site logo -->
+
+			<!-- breadcrumb -->
+			<ul class="breadcrumb">
+			  <li class="breadcrumb-item"><a href="#">Cart</a></li>
+			  <li class="breadcrumb-item"><a href="#">Customer Information</a></li>
+			  <li class="breadcrumb-item"><a href="#">Shipping Method</a></li>
+			  <li class="breadcrumb-item active">Payment Method</li>
+			</ul>
+			<!-- / breadcrumb -->
+
+			<!-- shipping details contaier -->
+			<div id="shippingDetails">
+			</div>
+			<!-- / shipping details contaier -->
+
+			<!-- shipping method contaier -->
+			<div id="shippingMethod" style="display: none;">
+			</div>
+			<!-- / shipping method contaier -->
+
+			<!-- payment method contaier -->
+			<div id="paymentMethod" style="display: none;">
+			</div>
+			<!-- / payment method contaier -->
+
+			<hr/>
+			<!-- footer links -->
+			<div class="footer-links">
+				<ul>
+					<li><a href="">Refund Policy</a></li>
+					<li><a href="">Privacy Policy</a></li>
+					<li><a href="">Terms of Services</a></li>
+				</ul>
+			</div>
+			<!-- / footer links -->
+		</div>
+		<!-- / main common contaier -->
+
+		<!-- sidebar contaier -->
+		<div id="paymentSidebarDesktop" class="SidebarDesktop">
+		</div>
+		<!-- / sidebar contaier -->
+	</div>
+	<!-- / content wrapper -->
+
+</body>
+<!--/ body -->
+</html>
+<!--/ html -->

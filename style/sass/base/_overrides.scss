@@ -1,0 +1,26 @@
+// form input controler 
+
+.form-control{
+	&:focus{
+		border:1px solid #9ad2db !important;
+		-webkit-box-shadow: 0 0 0 1px #9ad2db !important;
+    	box-shadow: 0 0 0 1px #9ad2db !important;
+	}
+}
+
+select{
+	&.form-control:not([size]):not([multiple]){
+		height:auto !important;
+	}
+}
+// / form input controler 
+
+// button
+
+.btn{
+	&.focus, &:focus{
+		box-shadow: none !important;
+	}
+}
+
+// / button

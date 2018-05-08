@@ -1,0 +1,71 @@
+<script>   	
+		$(document).ready(function(){
+		    $("#continue-2").click(function(){
+		        $("#shippingMethod").hide();
+		        $("#paymentMethod").show();
+		    });
+
+		    $("#back-1").click(function(){
+		        $("#shippingMethod").hide();
+		        $("#shippingDetails").show();
+		    });
+		});
+</script>
+
+<!-- shipping address and shipping method -->
+
+<!-- shipping address method row -->
+<div class="shipping-address-row">
+	<div class="row">
+		<div class="col-md-3 col-sm-3 col-3">
+			<p>Shipping address</p>
+		</div>
+		<div class="col-md-7 col-sm-6 col-6">
+			<p class="address">2145 Market Street, San Francisco CA 94114, United State</p>
+		</div>
+		<div class="col-md-2 col-sm-3 col-3">
+			<a href="" class="edit">Edit</a>
+		</div>
+	</div>
+</div>
+<!-- / shipping address method row -->
+
+<!-- title -->
+<div class="row">
+	<div class="col-md-12">
+		<h5>Shipping Methods</h5>
+	</div>
+</div>
+<!-- / title -->
+
+<!-- shipping address method row -->
+<div class="row shipping-method-row">
+	<div class="col-md-8 col-sm-8 col-8">
+		<label class="radio-container">Free Ground Shipping
+  			<input type="radio" checked="checked" name="shipping-method" id="free-shipping" value="free">
+  			<span class="checkmark"></span>
+		</label>
+	</div>
+		<div class="col-md-4 col-sm-4 col-4">
+		<p>Free</p>
+	</div>
+</div>
+<!-- / shipping address method row -->
+
+<!-- return cart link -->
+<div class="row continue-payment">
+	<div class="col-md-6 col-sm-12 col-xs-12 shipping">
+		<button class="btn shipping-btn" name="sumbmit" id="continue-2">Continue to payment method</button>
+	</div>
+	<div class="col-md-6 col-sm-12 col-xs-12 return">
+		<p class="return-cart">
+			<a href="">
+				<img src="assets/images/left-angle.png" alt="left-arrow">
+				<span id="back-1">Return to customer information</span>
+			</a>
+		</p>
+	</div>
+</div>
+<!-- / return cart link -->
+
+<!-- / shipping address and shipping method -->

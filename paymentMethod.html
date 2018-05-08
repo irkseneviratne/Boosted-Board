@@ -1,0 +1,449 @@
+<script>
+// show hide divs
+$(document).ready(function(){
+	$( ".card-link" ).click(function() {
+  		$(".collapse").collapse('hide');
+	});
+
+    $("#back-2").click(function(){
+        $("#paymentMethod").hide();
+        $("#shippingMethod").show();
+    });
+    
+	$("#credit-card").click(function() {
+		$("#credit-card-radio").prop( "checked", true );
+	});
+
+	$("#paypal").click(function() {
+		$("#paypal-radio").prop( "checked", true );
+	});
+
+	$("#amazon").click(function() {
+		$("#amazon-radio").prop( "checked", true );
+	});
+
+	$("#affirm").click(function() {
+		$("#affirm-radio").prop( "checked", true );
+	});
+
+	$("#same-address").click(function() {
+		$("#same-address-radio").prop( "checked", true );
+	});
+
+	$("#dif-address").click(function() {
+		$("#dif-address-radio").prop( "checked", true );
+	});
+});
+// / show hide divs
+</script>
+<!-- shipping address and shipping method -->
+
+<!-- shipping address method row -->
+<div class="shipping-address-row">
+	<div class="row">
+		<div class="col-md-3 col-sm-3 col-3">
+			<p>Shipping address</p>
+		</div>
+		<div class="col-md-7 col-sm-6 col-6">
+			<p class="address">2145 Market Street, San Francisco CA 94114, United State</p>
+		</div>
+		<div class="col-md-2 col-sm-3 col-3">
+			<a href="" class="edit">Edit</a>
+		</div>
+	</div>
+	<hr/>
+	<div class="row">
+		<div class="col-md-3 col-sm-3 col-3">
+			<p>Shipping method</p>
+		</div>
+		<div class="col-md-7 col-sm-6 col-6">
+			<p class="address">Free Ground Shipping - Free</p>
+		</div>
+		<div class="col-md-2 col-sm-3 col-3">
+			<a href="" class="edit">Edit</a>
+		</div>
+	</div>
+</div>
+<!-- / shipping address method row -->
+
+<!-- title -->
+<div class="row payment-method-title-row">
+	<div class="col-md-12">
+		<h5>Payment Methods</h5>
+		<p>All the transactions are secure and encrypted.</p>
+	</div>
+</div>
+<!-- / title -->
+
+<!-- warning message -->
+<div class="row" style="display: none;">
+	<div class="col-md-12">
+		<div class="warning-row">
+			This infomation you provided couldn't be verified. Please check your card details and try again.
+		</div>		
+	</div>
+</div>
+<!-- warning message -->
+
+<form>
+<!-- shipping address method row -->
+<div class="row">
+	<div class="col-md-12">
+		<div id="accordion" class="payment-method">
+		    <div class="card">
+		    	<!-- card header -->
+		        <div class="card-header credit-card">
+		            <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" id="credit-card">
+	               		<label class="radio-container"><span>Credit Card</span>
+				  			<input type="radio" checked="checked" name="payment-method" id="credit-card-radio" value="credit-card">
+				  			<span class="checkmark"></span>
+				  			<div class="float-right">
+				  				<div class="visa bw"></div>
+				  				<div class="master bw"></div>
+				  				<div class="amex bw"></div>
+				  				<div class="discover bw"></div>
+				  				<span class="andmore">and more...</span>
+							</div>
+						</label>
+		            </a>
+		        </div>
+		        <!-- / card header -->
+
+		        <div id="collapseTwo" class="collapse show">
+		            <div class="card-body">
+					<!-- company name -->
+					<div class="row">
+						<div class="col-md-12 card-number">
+							<div class="form-group">
+								<input type="number" name="card-number" placeholder="Card number" class="form-control" required="required"/>
+								<img src="assets/images/lock.png" alt="lock" class="lock">
+								<div class="error-msg" style="display: none;">Please enter a valid credit card number</div>
+							</div>
+						</div>
+					</div>
+					<!-- / company name -->
+
+					<!-- card detail row -->
+					<div class="row card-detail-row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" name="cardholder-name" placeholder="cardholder name" class="form-control" required="required"/>
+								<div class="error-msg" style="display: none;">Please enter your name as it appears on the card</div>
+							</div>
+						</div>
+						<div class="col-md-3 exp-date">
+							<div class="form-group">
+								<input type="text" name="expire-date" placeholder="MM/YY" class="form-control" required="required"/>
+								<div class="error-msg" style="display: none;">Please enter valid expiry date</div>
+							</div>
+						</div>
+						<div class="col-md-3 cvv">
+							<div class="form-group">
+								<input type="number" name="cvv" placeholder="CVV" class="form-control" required="required"/>
+								<img src="assets/images/question.png" alt="question" class="question">
+								<div class="error-msg" style="display: none;">Please enter the CVV</div>
+							</div>
+						</div>
+					</div>
+					<!-- / card detail row -->
+		            </div>
+		        </div>
+		    </div>
+		    <div class="card">
+		    	<!-- card header -->
+		        <div class="card-header">
+		            <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" id="paypal">
+		                <label class="radio-container">
+		                	<img src="assets/images/paypal-payment.png" alt="paypal logo">
+				  			<input type="radio" name="payment-method" value="paypal" class="radio-btn" id="paypal-radio">
+				  			<span class="checkmark"></span>
+				  			<div class="float-right">
+				  				<div class="visa"></div>
+				  				<div class="master"></div>
+				  				<div class="amex"></div>
+				  				<div class="discover"></div>
+							</div>
+						</label>
+		            </a>
+		        </div>
+		        <!-- / card header -->
+
+		        <div id="collapseThree" class="collapse">
+		            <div class="card-body">
+		            	<!-- company name -->
+						<div class="row">
+							<div class="col-md-12 card-number">
+								<div class="form-group">
+									<input type="number" name="card-number" placeholder="Card number" class="form-control" required="required"/>
+									<img src="assets/images/lock.png" alt="lock" class="lock">
+								</div>
+							</div>
+						</div>
+						<!-- / company name -->
+						<!-- card detail row -->
+						<div class="row card-detail-row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" name="cardholder-name" placeholder="cardholder name" class="form-control" required="required"/>
+								</div>
+							</div>
+							<div class="col-md-3 exp-date">
+								<div class="form-group">
+									<input type="text" name="expire-date" placeholder="MM/YY" class="form-control" required="required"/>
+								</div>
+							</div>
+							<div class="col-md-3 cvv">
+								<div class="form-group">
+									<input type="number" name="cvv" placeholder="CVV" class="form-control" required="required"/>
+									<img src="assets/images/question.png" alt="question" class="question">
+								</div>
+							</div>
+						</div>
+						<!-- / card detail row -->
+		            </div>
+		        </div>
+		    </div>
+		    <div class="card">
+		    	<!-- card header -->
+		        <div class="card-header">
+		            <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" id="amazon">
+		                <label class="radio-container">
+		                	<img src="assets/images/amazon-payment.png" alt="amazon logo">
+				  			<input type="radio" name="payment-method" id="amazon-radio" value="amazon" class="radio-btn">
+				  			<span class="checkmark"></span>
+						</label>
+		            </a>
+		        </div>
+		        <!-- / card header -->
+
+		        <div id="collapseFour" class="collapse">
+		            <div class="card-body">
+		                <!-- company name -->
+						<div class="row">
+							<div class="col-md-12 card-number">
+								<div class="form-group">
+									<input type="number" name="card-number" placeholder="Card number" class="form-control" required="required"/>
+									<img src="assets/images/lock.png" alt="lock" class="lock">
+								</div>
+							</div>
+						</div>
+						<!-- / company name -->
+						<!-- card detail row -->
+						<div class="row card-detail-row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" name="cardholder-name" placeholder="cardholder name" class="form-control" required="required"/>
+								</div>
+							</div>
+							<div class="col-md-3 exp-date">
+								<div class="form-group">
+									<input type="text" name="expire-date" placeholder="MM/YY" class="form-control" required="required"/>
+								</div>
+							</div>
+							<div class="col-md-3 cvv">
+								<div class="form-group">
+									<input type="number" name="cvv" placeholder="CVV" class="form-control" required="required"/>
+									<img src="assets/images/question.png" alt="question" class="question">
+								</div>
+							</div>
+						</div>
+						<!-- / card detail row -->
+		            </div>
+		        </div>
+		    </div>
+		    <div class="card">
+		    	<!-- card header -->
+		        <div class="card-header">
+		            <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" id="affirm">
+		                <label class="radio-container"><img src="assets/images/affirm-payment.png" class="affirm-logo" alt="affirm logo">
+		                <span>Monthly Payment</span>
+				  			<input type="radio" name="payment-method" id="affirm-radio" value="affirm-logo" class="radio-btn">
+				  			<span class="checkmark"></span>
+						</label>
+		            </a>
+		        </div>
+		        <!-- / card header -->
+
+		        <div id="collapseFive" class="collapse">
+		            <div class="card-body">
+		                <!-- company name -->
+						<div class="row">
+							<div class="col-md-12 card-number">
+								<div class="form-group">
+									<input type="number" name="card-number" placeholder="Card number" class="form-control" required="required"/>
+									<img src="assets/images/lock.png" alt="lock" class="lock">
+								</div>
+							</div>
+						</div>
+						<!-- / company name -->
+						<!-- card detail row -->
+						<div class="row card-detail-row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" name="cardholder-name" placeholder="cardholder name" class="form-control" required="required"/>
+								</div>
+							</div>
+							<div class="col-md-3 exp-date">
+								<div class="form-group">
+									<input type="text" name="expire-date" placeholder="MM/YY" class="form-control" required="required"/>
+								</div>
+							</div>
+							<div class="col-md-3 cvv">
+								<div class="form-group">
+									<input type="number" name="cvv" placeholder="CVV" class="form-control" required="required"/>
+									<img src="assets/images/question.png" alt="question" class="question">
+								</div>
+							</div>
+						</div>
+						<!-- / card detail row -->
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+<!-- / shipping address method row -->
+
+<!-- title -->
+<div class="row">
+	<div class="col-md-12">
+		<h5>Billing Address</h5>
+	</div>
+</div>
+<!-- / title -->
+
+<!-- shipping address method row -->
+<div class="row">
+	<div class="col-md-12">
+		<div id="accordion2" class="payment-method">
+		    <div class="card">
+		    	<!-- card header -->
+		        <div class="card-header">
+		            <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwoTwo" id="same-address">
+	               		<label class="radio-container">
+	               			<span>Same as shipping address</span>
+				  			<input type="radio" checked="checked" name="billing-method" id="same-address-radio" value="Same as shipping address">
+				  			<span class="checkmark"></span>
+						</label>
+		            </a>
+		        </div>
+		        <!-- / card header -->
+		    </div>
+		    <div class="card">
+		    	<!-- card header -->
+		        <div class="card-header">
+		            <a class="collapsed card-link" data-toggle="collapse" data-parent="#accordion2" href="#collapseThreeThree" id="dif-address">
+		                <label class="radio-container">
+		                	<span>Usa a different billing address</span>
+				  			<input type="radio" name="billing-method" id="dif-address-radio" value="Usa a different billing address">
+				  			<span class="checkmark"></span>
+						</label>
+		            </a>
+		        </div>
+		        <!-- / card header -->
+
+		        <div id="collapseThreeThree" class="collapse">
+		            <div class="card-body dif-shipping-detail">
+					<!-- name row -->
+					<div class="row name-row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" name="firt-name" placeholder="First Name" class="form-control" required="required"/>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" name="last-name" placeholder="Last Name" class="form-control" required="required"/>
+							</div>
+						</div>
+					</div>
+					<!-- / name row -->
+
+					<!-- company name -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="text" name="email" placeholder="Company (optional)" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<!-- / company name -->
+
+					<!-- address row -->
+					<div class="row address-row">
+						<div class="col-md-8">
+							<div class="form-group">
+								<input type="text" name="address" placeholder="Address" class="form-control" required="required"/>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<input type="text" name="arartment" placeholder="Apart, Suite, etc. (optional)" class="form-control" required="required"/>
+							</div>
+						</div>
+					</div>
+					<!-- / address row -->
+
+					<!-- city name -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="text" name="city" placeholder="City" class="form-control" required="required"/>
+							</div>
+						</div>
+					</div>
+					<!-- / city name -->
+
+					<!-- country row -->
+					<div class="row country-row">
+						<div class="col-md-6">
+							  <div class="form-group">
+							    <select class="form-control" id="exampleSelect1" required="required">
+							      <option>Canada</option>
+							      <option>America</option>
+							    </select>
+							  </div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" name="postal-code" placeholder="Postal code" class="form-control" required="required"/>
+							</div>
+						</div>
+					</div>
+					<!-- / country row -->
+
+					<!-- phone number -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<input type="number" name="phone" placeholder="Phone (required)" class="form-control" required="required"/>
+							</div>
+						</div>
+					</div>
+					<!-- / phone number -->
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+<!-- / shipping address method row -->
+
+<!-- return cart link and continue button -->
+<div class="row continue-payment">
+	<div class="col-md-6 col-sm-12 col-xs-12 shipping">
+		<button class="btn shipping-btn" name="sumbmit">Complete order</button>
+	</div>
+	<div class="col-md-6 col-sm-12 col-xs-12 return">
+		<p class="return-cart">
+			<a href="">
+				<img src="assets/images/left-angle.png" alt="left-arrow">
+				<span id="back-2">Return to shipping method</span>
+			</a>
+		</p>
+	</div>
+</div>
+<!-- / return cart link and continue button -->
+</form>
+
+<!-- / shipping address and shipping method -->

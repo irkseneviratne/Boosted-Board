@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "../sass/main.css",
+	"sources": [
+		"../sass/main.scss",
+		"../sass/pages/_payment.scss"
+	],
+	"sourcesContent": [
+		"// base\r\n\r\n\r\n// components\r\n\r\n\r\n// helpers\r\n\r\n\r\n// pages\r\n@import \"pages/_payment\"\r\n\r\n// vendors",
+		".main{\r\n\twidth:55%;\r\n\tfloat:left;\r\n}\r\n\r\n.sidebar{\r\n\twidth:45%;\r\n\tbackground-color:#f2f2f2;\r\n\tfloat:left;\r\n\theight:100vh;\r\n\tborder-left:1px solid #dadada;\r\n}"
+	],
+	"mappings": ";ACAA,AAAA,KAAK,CAAA;EACJ,KAAK,EAAC,GAAI;EACV,KAAK,EAAC,IAAK;CACX;;;AAED,AAAA,QAAQ,CAAA;EACP,KAAK,EAAC,GAAI;EACV,gBAAgB,EAAC,OAAQ;EACzB,KAAK,EAAC,IAAK;EACX,MAAM,EAAC,KAAM;EACb,WAAW,EAAC,iBAAkB;CAC9B",
+	"names": []
+}

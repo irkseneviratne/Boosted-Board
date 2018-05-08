@@ -1,0 +1,204 @@
+
+	// shipping details section
+	.main{
+		// pay buttons
+		.pay-method{
+			padding-left: 0;
+			li{
+				list-style: none;
+				display: inline-block;
+				margin-right: 10px;
+
+				// media query for smaller screen than 1000px width
+				@media screen and (max-width:767px){
+					width: calc(50% - 7px);
+				}
+				// / media query for smaller screen than 1000px width
+
+				&:last-child{
+				// media query for smaller screen than 1000px width
+					@media screen and (max-width:767px){
+						margin-right: 0;
+						float:right;
+					}
+				// / media query for smaller screen than 1000px width
+				}
+
+				// paypal pay button
+				.paypal{
+					background-color: $paypal-btn-bg-color;
+					padding: 7px 25px;
+					width: 100%;
+				}
+				// / paypal pay button
+
+				// amazon pay button
+				.amazon{
+					background-color: $amazon-btn-bg-color;
+					padding: 7px 25px;
+					width: 100%;
+
+				}
+				// / amazon pay button
+			}
+		}
+		// / pay buttons
+
+		// alternate payment method separator 
+		.alt-pay-separator{
+			display: flex;
+			align-items: center;
+			ustify-content: space-between;
+			text-align: center;
+			color: $sep-txt-color;
+			font-size: 12px;
+			margin-top: 25px;
+
+			// separator lines
+			&::before, &::after{
+				content: '';
+				display: inline-block;
+				height: 1px;
+				background: $sep-line-color;
+				flex-grow: 1;
+			}
+			// / separator lines
+			// separator text
+			span{
+				display: inline-block;
+				text-align: center;
+				padding: 0 10px;
+			}
+			// / separator text
+		}
+		// / alternate payment method separator
+
+		// shipping detail section
+		.shipping-section{
+			// title
+			h5{
+				font-size: 18px;
+				font-weight: 500;
+				margin-top: 20px;
+			}
+			// / title
+
+			// inputs
+			.form-control{
+				padding: 10px;
+				border-radius: 5px;
+				border-color: $input-border-color;
+				font-size: 14px;
+			}
+
+			.form-group{
+				margin-bottom: 12px;
+			}
+			// / inputs
+
+			// label
+			.field-label{
+				font-size: 12px;
+				position: absolute;
+				color: $field-label-color;
+				left:26px;
+				top: 5px;
+				display: none;
+			}
+			// / label
+
+			// name row
+			.name-row{
+				.col-md-6{
+					&:first-child{
+						padding-right: 6px;
+
+						// media query for smaller screen than 768px width
+						@media screen and (max-width: 767px){
+							padding-right: 15px !Important;
+						}
+						// / media query for smaller screen than 768px width
+					}
+
+					&:last-child{
+						padding-left: 6px;
+
+						// media query for smaller screen than 768px width
+						@media screen and (max-width: 767px){
+							padding-left: 15px !Important;
+						}
+						// / media query for smaller screen than 768px width
+					}
+				}
+			}
+			// / name row
+
+			// address row
+			.address-row{
+				.col-md-8{
+					padding-right: 6px;
+
+						// media query for smaller screen than 768px width
+						@media screen and (max-width: 767px){
+							padding-right: 15px !Important;
+						}
+						// / media query for smaller screen than 768px width
+				}
+
+				.col-md-4{
+					padding-left: 6px;
+
+
+						// media query for smaller screen than 768px width
+						@media screen and (max-width: 767px){
+							padding-left: 15px !Important;
+						}
+						// / media query for smaller screen than 768px width
+				}
+			}
+			// / address row
+
+			// country row
+			.country-row{
+				.col-md-6{
+					&:first-child{
+						padding-right: 6px;
+
+
+						// media query for smaller screen than 768px width
+						@media screen and (max-width: 767px){
+							padding-right: 15px !Important;
+						}
+						// / media query for smaller screen than 768px width
+					}
+
+					&:last-child{
+						padding-left: 6px;
+
+
+						// media query for smaller screen than 768px width
+						@media screen and (max-width: 767px){
+							padding-left: 15px !Important;
+						}
+						// / media query for smaller screen than 768px width
+					}
+				}
+			}
+			// / country row
+
+			// horizontal line
+			hr{
+				margin-top: 50px;
+
+								// media query for smaller screen than 768px width
+				@media screen and (max-width: 767px){
+					margin-top: 0 !Important;
+				}
+				// / media query for smaller screen than 768px width
+
+			}
+			// / horizontal line
+		}
+		// / shipping detail section
+	}
+	// / shipping details section

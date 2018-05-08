@@ -1,0 +1,32 @@
+	// breadcrumb
+	.breadcrumb{
+		background-color: $white !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+
+		@media screen and (max-width:1000px){
+			display: none !important;
+		}
+
+		li{
+			font-size: 13px;
+
+			&.active{
+				color: $breadcrumb-link-active-color !important;
+			}
+		}
+		.breadcrumb-item{
+			+.breadcrumb-item{
+				&::before{
+					content: " " !important;
+					background-image: url("../../assets/images/right-angle.png");
+					background-repeat:no-repeat;
+					width: 12px;
+					height: 11px;
+					margin: 0 5px;
+					padding-right: .4em;
+				}
+			}
+		}
+	}
+	// / breadcrumb

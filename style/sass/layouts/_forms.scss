@@ -1,0 +1,147 @@
+// links
+a{
+	color:$link-color !important;
+
+	// link hover
+	&:hover{
+		text-decoration: none !important;
+		color: $link-hover-color !important;
+	} 
+	// / link hover
+}
+// /links
+
+// checkbox 
+.checkbox-container{
+    display: block;
+    color:$checkbox-container-color;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    line-height: 1.3;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    // checkbox input
+	input {
+	    position: absolute;
+	    opacity: 0;
+	    cursor: pointer;
+
+	    &:checked ~ .checkmark {
+		    background-color: $checkbox-checked-color;
+		    border: 1px solid $checkbox-checked-color;
+		}
+
+		&:checked ~ .checkmark:after {
+		    display: block;
+		}
+	}
+	// / checkbox input
+
+	// checkmark
+	.checkmark {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    height: 18px;
+	    width: 18px;
+	    border-radius: 3px;
+	    border: 1px solid $checkbox-border-color;
+
+	    &:after {
+		    content: "";
+		    position: absolute;
+		    left: 6px;
+		    top: 2px;
+		    width: 5px;
+		    height: 10px;
+		    border: solid white;
+		    border-width: 0 2px 2px 0;
+		    -webkit-transform: rotate(45deg);
+		    -ms-transform: rotate(45deg);
+		    transform: rotate(45deg);
+		}
+	}
+	// / checkmark
+}
+// / checkbox
+
+// radio button
+
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    // On mouse-over, add a grey background color
+	&:hover input ~ .checkmark {
+    	background-color: $checkbox-checked-color;
+	}
+	// / On mouse-over, add a grey background color
+
+    // Hide the browser's default radio button
+	input {
+	    position: absolute;
+	    opacity: 0;
+	    cursor: pointer;
+
+	    // When the radio button is checked, add a blue background
+		&:checked ~ .checkmark {
+		    background-color: $checkbox-checked-color;
+		}
+		// / When the radio button is checked, add a blue background
+
+		// Show the indicator (dot/circle) when checked
+		&:checked ~ .checkmark:after {
+		    display: block;
+		}
+		// / Show the indicator (dot/circle) when checked
+	}
+	// / Hide the browser's default radio button
+
+	// Create a custom radio button
+	.checkmark {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    height: 20px;
+	    width: 20px;
+	    background-color: #eee;
+	    border-radius: 50%;
+
+	    // Create the indicator (the dot/circle - hidden when not checked)
+		&:after {
+		    content: "";
+		    position: absolute;
+		    display: none;
+		    top: 7px;
+		    left: 7px;
+		    width: 6px;
+		    height: 6px;
+			border-radius: 50%;
+			background: white;
+		}
+		// / Create the indicator (the dot/circle - hidden when not checked)
+	}
+	// / Create a custom radio button
+}
+
+
+
+
+
+
+
+// / radio button

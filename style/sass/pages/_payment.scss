@@ -1,0 +1,159 @@
+// wrapper
+.wrapper{
+	padding:0px !Important;
+
+	//mobile content
+	.mobile-content{
+		// media query for smaller screen than 1000px width
+		@media screen and (min-width:1001px){
+			display: none;
+		}
+		// / media query for smaller screen than 1000px width
+
+		// logo wrapper
+		.logo-wrapper{
+			    padding: 1.5em 1em;
+    			max-width: 40em;
+    			margin: 0 auto;
+			// logo
+			.logo{
+				width:160px;
+			}
+			// / logo
+		}
+		// / logo wrapper
+	}
+	//mobile content
+
+	// main common container
+	.main-common{
+		// media query for bigger screen than 1365px width
+		@media screen and (min-width:1365px){
+			padding:3% 4% 0% 8% !important;
+		}
+		// / media query for bigger screen than 1365px wid
+
+		// media query for smaller screen than 1000px width
+		@media screen and (min-width:1001px){
+			width:56%;
+			padding: 3% 4% 0% 4%;
+			float: left;
+		}
+
+		@media screen and (max-width:1000px){
+			padding: 1.5em 1em;
+			max-width: 40em;
+			margin: 0 auto;
+		}
+		// / media query for smaller screen than 1000px width
+
+		// logo
+		.logo{
+			width:160px;
+
+			// media query for smaller screen than 1000px width
+			@media screen and (max-width:1000px){
+				display: none;
+			}
+			// / media query for smaller screen than 1000px width
+		}
+		// / logo
+	}
+	// / main common container
+
+
+	// footer links
+	.footer-links{
+		ul{
+			padding-left: 0;
+			li{
+				display: inline-block;
+				list-style: none;
+				padding-right: 10px;
+
+				&:last-child{
+					padding-right: 0;
+				}
+
+				a{
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	// / footer link
+
+	// payment continue section
+			.continue-payment{
+				margin-bottom: 50px;
+			.col-md-6{
+				&.shipping{
+					order:2;
+
+					// media query for smaller screen than 768px width
+					@media screen and (max-width: 767px){
+					order:1 !Important;
+					}
+					// / media query for smaller screen than 768px width
+
+					// shipping button 
+					.shipping-btn{
+						background-color: $shopping-btn-bg-color;
+						color: $white;
+						padding: 15px 20px;
+						font-size: 15px;
+						float: right;
+
+						// button hover
+						&:hover{
+							background: $shopping-btn-bg-hover-color;
+							transition: background-color 0.2s ease-in-out;
+						}
+						// / button hover
+
+						// button focus
+						&:focus{
+							box-shadow: 0 0 0 1px $shopping-btn-bg-focus-color inset !important;
+						}
+						// / button focus
+
+						// media query for smaller screen than 768px width
+						@media screen and (max-width: 767px){
+							float: none !Important;
+							margin: 0 auto;
+							width: 100%;
+						}
+						// / media query for smaller screen than 768px width	
+					}
+					// / shipping button
+				}
+			}
+
+			.col-md-6{
+			&.return{
+				order:1;
+
+				// media query for smaller screen than 768px width
+				@media screen and (max-width: 767px){
+					order:2 !Important;
+				}
+				// / media query for smaller screen than 768px width
+
+				// return cart link
+				.return-cart{
+					margin-top: 15px;
+
+					// media query for smaller screen than 768px width
+					@media screen and (max-width: 767px){
+						text-align: center;
+					}
+					// / media query for smaller screen than 768px width
+				}
+				// / return cart link
+			}
+			}
+		}
+
+	// / payment continue section
+}
+// / wrapper

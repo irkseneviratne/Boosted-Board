@@ -1,0 +1,57 @@
+// shipping methods
+
+// shipping address
+.shipping-address-row{
+	background-color: $shipping-address-bg-color;
+	border:1px solid $shipping-address-border-color;
+	border-radius: 5px;
+	padding: 15px;
+	margin: 0 0 30px 0 !important;
+
+	p{
+		margin-bottom: 0px;
+		font-size: 14px;
+
+		&.address{
+			color:$txt-fade-color;
+		}
+	}
+
+	.col-md-2{
+		text-align: right;
+	}
+
+	.col-md-4{
+		text-align: right;
+	}
+}
+// shipping address
+
+// shipping method
+.shipping-method-row{
+	background-color: $white;
+	border:1px solid $shipping-address-border-color;
+	border-radius: 5px;
+	padding: 15px 5px;
+	margin: 15px 0 30px 0 !important;
+
+	p{
+		margin-bottom: 0px;
+		font-size: 14px;
+
+		&.address{
+			color:$txt-fade-color;
+		}
+	}
+
+	.col-md-2{
+		text-align: right;
+	}
+
+	.col-md-4{
+		text-align: right;
+	}
+}
+// shipping address
+
+// / shipping methods

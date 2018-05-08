@@ -1,0 +1,342 @@
+// payment method
+
+.payment-method{
+	margin-bottom: 30px;
+	margin-top: 15px;
+	.card{
+		border-bottom: none;
+		border-radius: 0;
+
+		&:first-child{
+			border-radius: 5px 5px 0 0;
+
+			.card-header{
+				border-radius: 5px 5px 0 0 !important;
+			}
+		}
+
+		&:last-child{
+			border-radius: 0 0 5px 5px;
+			border-bottom: 1px solid $card-border-color !important;
+
+			.card-header{
+				border-radius: 0 0 5px 5px !important;
+			}
+		}
+
+		.card-header{
+			background-color: $white;
+			border-radius: 0 !important;
+			border-bottom:none;
+
+			.affirm-logo{
+				margin-top: -5px;
+			}
+
+			span{
+				font-size: 14px;
+				color: $back;
+				font-weight: 600;
+			}
+
+			&.credit-card{
+				span{
+					font-size: 14px;
+					color: $back;
+				}
+			}
+			.float-right{
+				// media query for smaller screen than 768px width
+				@media screen and (max-width: 767px){
+					display: none;
+				}
+				// / media query for smaller screen than 768px width
+
+				.andmore{
+					top: -10px;
+					position: relative;
+					display: inline-block;
+					margin-left: 7px;
+					color: $txt-fade-color;
+					font-weight:100;
+				}
+				div{
+					background-repeat: no-repeat;
+					height:28px;
+					width: 48px;
+					display: inline-block;
+					border-radius: 3px;
+					border:1px solid $payment-method-img-border-color;
+					background-image:url("../../assets/images/payment-sprite.png");
+				
+					&.visa{
+	    				background-position: 0 -28px;
+
+	    				&.bw{
+	    					background-position: 0 0px;
+	    				}
+
+	    				&:hover{
+	    					background-position: 0 -28px;
+	    				}
+					}
+					&.master{
+	    				background-position: -48px -28px;
+
+	    				&.bw{
+	    					background-position: -48px 0px;
+	    				}
+
+	    				&:hover{
+	    					background-position: -48px -28px;
+	    				}
+					}
+					&.amex{
+	    				background-position: -96px -28px;
+
+	    				&.bw{
+	    					background-position: -96px 0px;
+	    				}
+
+	    				&:hover{
+	    					background-position: -96px -28px;
+	    				}
+					}
+					&.discover{
+	    				background-position: -144px -28px;
+
+	    				&.bw{
+	    					background-position: -144px 0px;
+	    				}
+
+	    				&:hover{
+	    					background-position: -144px -28px;
+	    				}
+					}
+				}
+
+			}
+		}
+
+		.card-body{
+			background-color: $card-body-color;
+			border-top: 1px solid $card-border-color;
+
+			img{
+				&.lock, &.question{
+					position: absolute;
+				    top: 10px;
+				    right: 30px;
+				}
+			}
+
+			div{
+				&.error-msg{
+					font-size: 12px;
+					color:$error-msg-color;
+					line-height: 1;
+					margin-top: 5px;
+				}
+			}
+
+			.col-md-12{
+				&.card-number{
+					input{
+						padding-right: 35px;
+					}
+				}
+			}
+
+			.card-detail-row{
+				.col-md-6{
+					padding-right: 6px;
+
+						// media query for smaller screen than 768px width
+						@media screen and (max-width: 767px){
+							padding-right: 15px !Important;
+						}
+						// / media query for smaller screen than 768px width
+				}
+				.col-md-3{
+					&.exp-date{
+						padding-right: 6px;
+						padding-left: 6px;
+
+						// media query for smaller screen than 768px width
+						@media screen and (max-width: 767px){
+							padding-right: 15px !Important;
+							padding-left: 15px !Important;
+						}
+						// / media query for smaller screen than 768px width
+					}
+
+					&.cvv{
+						padding-left: 6px;
+
+						// media query for smaller screen than 768px width
+						@media screen and (max-width: 767px){
+							padding-left: 15px !Important;
+						}
+						// / media query for smaller screen than 768px width
+
+						input{
+							padding-right: 35px;
+						}	
+					}
+				}
+			}
+
+			// shipping detail section
+			&.dif-shipping-detail{
+				// title
+				h5{
+					font-size: 18px;
+					font-weight: 500;
+					margin-top: 20px;
+				}
+				// / title
+
+				// inputs
+				.form-control{
+					padding: 10px;
+					border-radius: 5px;
+					border-color: $input-border-color;
+					font-size: 14px;
+				}
+
+				.form-group{
+					margin-bottom: 12px;
+				}
+				// / inputs
+
+				// label
+				.field-label{
+					font-size: 12px;
+					position: absolute;
+					color: $field-label-color;
+					left:26px;
+					top: 5px;
+					display: none;
+				}
+				// / label
+
+				// name row
+				.name-row{
+					.col-md-6{
+						&:first-child{
+							padding-right: 6px;
+
+							// media query for smaller screen than 768px width
+							@media screen and (max-width: 767px){
+								padding-right: 15px !Important;
+							}
+							// / media query for smaller screen than 768px width
+						}
+
+						&:last-child{
+							padding-left: 6px;
+
+							// media query for smaller screen than 768px width
+							@media screen and (max-width: 767px){
+								padding-left: 15px !Important;
+							}
+							// / media query for smaller screen than 768px width
+						}
+					}
+				}
+				// / name row
+
+				// address row
+				.address-row{
+					.col-md-8{
+						padding-right: 6px;
+
+							// media query for smaller screen than 768px width
+							@media screen and (max-width: 767px){
+								padding-right: 15px !Important;
+							}
+							// / media query for smaller screen than 768px width
+					}
+
+					.col-md-4{
+						padding-left: 6px;
+
+
+							// media query for smaller screen than 768px width
+							@media screen and (max-width: 767px){
+								padding-left: 15px !Important;
+							}
+							// / media query for smaller screen than 768px width
+					}
+				}
+				// / address row
+
+				// country row
+				.country-row{
+					.col-md-6{
+						&:first-child{
+							padding-right: 6px;
+
+
+							// media query for smaller screen than 768px width
+							@media screen and (max-width: 767px){
+								padding-right: 15px !Important;
+							}
+							// / media query for smaller screen than 768px width
+						}
+
+						&:last-child{
+							padding-left: 6px;
+
+
+							// media query for smaller screen than 768px width
+							@media screen and (max-width: 767px){
+								padding-left: 15px !Important;
+							}
+							// / media query for smaller screen than 768px width
+						}
+					}
+				}
+				// / country row
+
+				// horizontal line
+				hr{
+					margin-top: 50px;
+
+					// media query for smaller screen than 768px width
+					@media screen and (max-width: 767px){
+						margin-top: 0 !Important;
+					}
+					// / media query for smaller screen than 768px width
+
+				}
+				// / horizontal line
+			}
+			// / shipping detail section
+		}
+	}
+}
+
+// / payment method
+
+// payment method title row
+.payment-method-title-row{
+	h5{
+		margin-bottom: 0;
+	}
+	p{
+		color: $txt-fade-color;
+		margin-bottom: 0;
+	}
+}
+// payment method title row
+
+// warninig row
+.warning-row{
+	background-color: $warning-row-bg-color;
+	border-radius: 5px;
+	padding: 15px;
+	color:$white;
+	margin: 15px 0 5px 0;
+}
+// / warning row

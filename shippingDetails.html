@@ -1,0 +1,189 @@
+<script>   	
+		$(document).ready(function(){
+		    $("#continue-1").click(function(){
+		        $("#shippingDetails").hide();
+		        $("#shippingMethod").show();
+		    });
+		});
+</script>
+
+			<div class="main">
+				<!-- payment method -->
+				<ul class="pay-method">
+					<li>
+						<button class="btn paypal">
+							<img src="assets/images/paypal.png" alt="paypal logo">
+						</button
+					</li>
+					<li>
+						<button class="btn amazon">
+							<img src="assets/images/amazon.png" alt="amazon pay logo">
+						</button>
+					</li>
+				</ul>
+				<!-- / payment method -->
+
+				<!-- OR separator -->
+				<div class="alt-pay-separator">
+					<span>OR</span>
+				</div>
+				<!-- / OR separator -->
+
+				<!-- shipping section details -->
+				<div class="shipping-section">
+					<form>
+					<!-- title -->
+					<div class="row">
+						<div class="col-md-12">
+							<h5>Contact information</h5>
+						</div>
+					</div>
+					<!-- / title -->
+
+					<!-- email -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="field-label">Email</label>
+								<input type="email" name="email" placeholder="Email" class="form-control" required="required"/>
+							</div>
+						</div>
+					</div>
+					<!-- / email -->
+
+					<!-- keep me checkbox -->
+					<div class="row">
+						<div class="col-md-12">
+							<label class="checkbox-container">Keep me up to date on news and exclusive offers
+							  <input type="checkbox" checked="checked">
+							  <span class="checkmark"></span>
+							</label>
+						</div>
+					</div>
+					<!-- / kepm me checkbox -->
+
+					<!-- title -->
+					<div class="row">
+						<div class="col-md-12">
+							<h5>Shipping address</h5>
+						</div>
+					</div>
+					<!-- / title -->
+
+					<!-- name row -->
+					<div class="row name-row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="field-label">First Name</label>
+								<input type="text" name="firt-name" placeholder="First Name" class="form-control" required="required"/>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="field-label">Last Name</label>
+								<input type="text" name="last-name" placeholder="Last Name" class="form-control" required="required"/>
+							</div>
+						</div>
+					</div>
+					<!-- / name row -->
+
+					<!-- company name -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="field-label">Company (optional)</label>
+								<input type="text" name="email" placeholder="Company (optional)" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<!-- / company name -->
+
+					<!-- address row -->
+					<div class="row address-row">
+						<div class="col-md-8">
+							<div class="form-group">
+								<label class="field-label">Address</label>
+								<input type="text" name="address" placeholder="Address" class="form-control" required="required"/>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label class="field-label">Apart, Suite, etc. (optional)</label>
+								<input type="text" name="arartment" placeholder="Apart, Suite, etc. (optional)" class="form-control" required="required"/>
+							</div>
+						</div>
+					</div>
+					<!-- / address row -->
+
+					<!-- city name -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="field-label">City</label>
+								<input type="text" name="city" placeholder="City" class="form-control" required="required"/>
+							</div>
+						</div>
+					</div>
+					<!-- / city name -->
+
+					<!-- country row -->
+					<div class="row country-row">
+						<div class="col-md-6">
+							  <div class="form-group">
+							  	<label class="field-label">Country</label>
+							    <select class="form-control" id="exampleSelect1" required="required">
+							      <option>Canada</option>
+							      <option>America</option>
+							    </select>
+							  </div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="field-label">Postal-code</label>
+								<input type="text" name="postal-code" placeholder="Postal code" class="form-control" required="required"/>
+							</div>
+						</div>
+					</div>
+					<!-- / country row -->
+
+					<!-- phone number -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="field-label">Phone (required)</label>
+								<input type="number" name="phone" placeholder="Phone (required)" class="form-control" required="required"/>
+							</div>
+						</div>
+					</div>
+					<!-- / phone number -->
+
+					<!-- save this info checkbox -->
+					<div class="row mt-3">
+						<div class="col-md-12">
+							<label class="checkbox-container">Save this information for next time
+							  <input type="checkbox" checked="checked">
+							  <span class="checkmark"></span>
+							</label>
+						</div>
+					</div>
+					<!-- / save this info checkbox -->
+
+					<!-- return cart link -->
+					<div class="row continue-payment">
+						<div class="col-md-6 col-sm-12 col-xs-12 shipping">
+				    		<button class="btn shipping-btn" name="sumbit" id="continue-1">Continue to shipping method</button>
+						</div>
+						<div class="col-md-6 col-sm-12 col-xs-12 return">
+							<p class="return-cart">
+								<a href="">
+									<img src="assets/images/left-angle.png" alt="left-arrow">
+									<span>Return to cart</span>
+								</a>
+							</p>
+						</div>
+					</div>
+					<!-- / return cart link -->
+					</form>
+				</div>
+				<!-- / shipping section details -->
+			</div>
